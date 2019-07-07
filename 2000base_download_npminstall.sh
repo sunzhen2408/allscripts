@@ -40,7 +40,7 @@ apt install build-essential -y
 
 # nanomsg
 apt install libnanomsg4 libnanomsg-dev -y
-
+cd /root/
 # git clone gateway
 git clone https://github.com/sunzhen2408/zhenlingGateway.git
 git checkout noedit
