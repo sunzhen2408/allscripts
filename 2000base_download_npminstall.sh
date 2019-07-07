@@ -3,7 +3,7 @@ apt update
 apt install pkg-config -y
 apt install curl -y
 apt install git -y
-apt install python2.7 -y
+apt install python  -y
 apt install curl -y
 
 #apt install webpack -y
@@ -11,15 +11,16 @@ apt install curl -y
 wget -qO- https://get.docker.com/ | sh
 service docker start
 docker run hello-world
-# nvm
+#nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 . ~/.bashrc
-#nvm install 8.16.0
+nvm install 8.15.1
 #apt install nodejs -y
 #nodejs
-apt install nodejs -y
-node -v
-npm -v
+
+#apt install nodejs -y
+#node -v
+#npm -v
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install -g webpack@4.30.0
 cnpm install webpack-cli@3.3.2
@@ -40,12 +41,15 @@ apt install build-essential -y
 
 # nanomsg
 apt install libnanomsg4 libnanomsg-dev -y
-cd /root/
+cd /root
 # git clone gateway
 git clone https://github.com/sunzhen2408/zhenlingGateway.git
+cd zhenlingGateway
 git checkout noedit
+cd /root
 # git clone framework
 git clone https://github.com/sunzhen2408/zhenlingFrameworknew.git
+cd /root/zhenlingFrameworknew
 ## ip framework
 VAR="eth0"
 ip="$(ip addr show "$VAR"|grep "inet\b"|awk '{print $2}')"
